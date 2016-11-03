@@ -27,7 +27,6 @@ export class DemoIcdemo
             let allInfo = JSON.parse(info);
             this.makes = allInfo.makes;
             this.models = allInfo.models;
-            this.cars = allInfo.cars;
         });
     }
 
