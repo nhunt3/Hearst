@@ -36,6 +36,6 @@ export class DemoIcdemo
         car_text.innerHTML = model_name;
 
         car_image.style.display = '';
-        car_image.src = "src/Pages_Overview/" + model_name + ".jpg";
+        car_image.src = model_name + ".jpg";
     }
 }
