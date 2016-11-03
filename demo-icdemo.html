@@ -4,7 +4,7 @@
 
 	<template>
 		<div>
-			<select style="width:100px;" value.bind="make.uid">
+			<select style="width:100px;" value.bind="make.uid" change.delegate="model.name=''">
 				<option />
 				<option repeat.for="make of makes" model.bind="make.uid">${make.name}</option>
 			</select>
