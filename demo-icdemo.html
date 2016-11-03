@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<body>
+
+	<template>
+		<div>
+			<select style="width:100px;" value.bind="make.uid">
+				<option />
+				<option repeat.for="make of makes" model.bind="make.uid">${make.name}</option>
+			</select>
+
+			<select style="width:100px;" value.bind="model.name" if.bind="make.uid" change.delegate="showImage(car_image, car_text, model.name)">
+				<option />
+				<option repeat.for="model of models | filter:'parentID':make.uid" model.bind="model.name">${model.name}</option>
+			</select>
+		</div>
+
+		<div>
+			<span style="display:none;" ref="car_text"></span>
+			<img style="display:none;" ref="car_image">
+		</div>
+	</template>
+
+</body>
+</html>
